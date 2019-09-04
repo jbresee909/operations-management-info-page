@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  div(class='content-container')
+    div(class='main-content')
+      div(class='content-section')
+        h1 About This Site
+        p(class='about-info') This site was inspired by and created for a project I was given in an operations management class while attending Utah State University. I took on the assignment as a personal challenge to create a quality product that I could feel proud of and use in future job hunting.
+        p(class='about-info') The purpose of the site is meant to be a place where students can come to learn about topics from the class and study up on concepts that we have covered. Included in the site is also a section that randomly generates a random term and definition (as definded by members of our class).
+        p(class='about-info') All the videos in this website are free resources of knowledge from youtube. They cover various topics that can also be found and defined in other parts of the page. 
+      div(class='content-section')
+        h2 WHAT IS OPERATIONS MANAGEMENT?
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/nG5-52a5lRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')
+        h2 Operations Management
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/FbbGlVle3oU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')
+        h2 Sources Cited
+        div(style='text-align: left;')
+            p(class='about-info') - What is operations management? - https://www.youtube.com/embed/nG5-52a5lRo
+            p(class='about-info') - Operations Management - https://www.youtube.com/embed/FbbGlVle3oU
+            p(class='about-info') - Operation Excellence: Running your company as a game - https://www.youtube.com/embed/fK8JhVbhxS4
+            p(class='about-info') - Hacking the supply chain: Pete Russell at TEDxAuckland - https://www.youtube.com/embed/SpnEGb0GdwY
+            p(class='about-info') - Four Principles Lean Management - Get Lean in 90 Seconds - https://www.youtube.com/embed/wfsRAZUnonI
+            p(class='about-info') - The 5 Whys - Lean Problem Solving - https://www.youtube.com/embed/SrlYkx41wEE
+            p(class='about-info') - The Kanban System - https://www.youtube.com/embed/DdYdIMe0Sl8
+    div(class='right-sidebar')
+      h2 TERMS AS DEFINED BY OUR CLASS
+      - for (var i = 10; i < 20; ++i) {
+          div(class='highlighted-terms')
+            h3(class='term')= words[i].word
+            p= words[i].definition
+      - }

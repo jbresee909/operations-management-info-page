@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class='content-container')
+    div(class='main-content')
+      h1(style='text-align: left;') Definition:
+      div(class='content-section')
+        h2= wordSearched
+        p= definition
+    div(class='right-sidebar')
+      h2 TERMS AS DEFINED BY OUR CLASS
+      - for (var i = 0; i < 3; ++i) {
+          div(class='highlighted-terms')
+            h3(class='term')= words[i].word
+            p= words[i].definition
+      - }

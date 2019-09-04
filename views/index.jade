@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div(class='content-container')
+    div(class='main-content')
+      div(class='content-section')
+        h2 WHAT IS OPERATIONS MANAGEMENT?
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/nG5-52a5lRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')
+        h2 Operations Management
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/FbbGlVle3oU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')
+        h2 Operation Excellence: Running your company as a game 
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/fK8JhVbhxS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')
+        h2 Hacking the supply chain: Pete Russell at TEDxAuckland
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/SpnEGb0GdwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    div(class='right-sidebar')
+      h2 TERMS AS DEFINED BY OUR CLASS
+      - for (var i = 0; i < 10; ++i) {
+          div(class='highlighted-terms')
+            h3(class='term')= words[i].word
+            p= words[i].definition
+      - }

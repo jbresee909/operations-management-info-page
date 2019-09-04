@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class='content-container')
+    div(class='main-content')
+      div(class='content-section')
+        h1 RANDOM DEFINITION GENERATOR
+        button(onclick='random()') Click Here
+        h3(id='random-term')
+        p(id='random-term-definition')
+      h1(style='text-align: left;') LEARN MORE
+      div(class='content-section')
+        h2 Four Principles Lean Management - Get Lean in 90 Seconds
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/wfsRAZUnonI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+      div(class='content-section')
+        h2 The 5 Whys - Lean Problem Solving
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/SrlYkx41wEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class='content-section')  
+        h2 The Kanban System
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/DdYdIMe0Sl8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    div(class='right-sidebar')
+      h2 TERMS AS DEFINED BY OUR CLASS
+      - for (var i = 5; i < 15; ++i) {
+          div(class='highlighted-terms')
+            h3(class='term')= words[i].word
+            p= words[i].definition
+      - }

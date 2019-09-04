@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon" href="https://img.icons8.com/nolan/64/000000/gears.png")
+
+    //- javascript files
+    script(src='/javascripts/exampleDefinitions.js')  
+    script(src='/javascripts/searchDefinition.js')  
+  body
+    //- navigation bar
+    div(id='navigation-bar')
+      ul(class='navigation-links')
+        a(href="/")
+          li(class='navigation-link') HOME
+        a(href="/definitions")
+          li(Class='navigation-link') SEARCH DEFINITIONS
+        a(href="/about")
+          li(Class='navigation-link') ABOUT
+        div(class="search-container")
+          input(type="text" placeholder="Search..." name="search" id='search')
+          button(onclick='search()' id='search-icon')
+              img(src="https://img.icons8.com/material/40/000000/search--v1.png")
+            
+      
+    block content
+
